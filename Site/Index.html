@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parallax Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Logo</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="image/stars.png" id="stars">
+      <img src="image/moon.png" id="moon">
+      <img src="image/mountains_behind.png" id="mountains_behind">
+      <h2 id="text">Moon Light</h2>
+      <a href="#sec" id="btn">Explore</a>
+      <img src="image/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+      <h2>Parallax Scrolling Effects</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas pretium aenean pharetra magna ac. Ac auctor augue mauris augue neque. Porttitor eget dolor morbi non arcu risus quis varius. Ornare massa eget egestas purus viverra. Facilisi morbi tempus iaculis urna. Sit amet consectetur adipiscing elit. Mi bibendum neque egestas congue. Eget sit amet tellus cras adipiscing enim. Sem nulla pharetra diam sit amet nisl suscipit. Molestie nunc non blandit massa enim nec dui nunc mattis. Amet tellus cras adipiscing enim eu. Sem et tortor consequat id porta nibh venenatis cras. Vivamus at augue eget arcu. Fermentum posuere urna nec tincidunt praesent semper. Vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Magna fringilla urna porttitor rhoncus dolor purus non. Mus mauris vitae ultricies leo integer malesuada nunc.<br><br>Ut enim blandit volutpat maecenas. Tellus pellentesque eu tincidunt tortor aliquam. Sed egestas egestas fringilla phasellus faucibus. Sed turpis tincidunt id aliquet. Et ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Diam ut venenatis tellus in. Sapien faucibus et molestie ac feugiat sed. Odio ut enim blandit volutpat. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Volutpat sed cras ornare arcu dui vivamus arcu felis bibendum. Sit amet nisl purus in. Quisque id diam vel quam elementum pulvinar etiam non quam. Ac felis donec et odio pellentesque diam. Lobortis elementum nibh tellus molestie nunc. Faucibus et molestie ac feugiat sed lectus vestibulum. Cras ornare arcu dui vivamus arcu felis bibendum ut tristique. Sagittis vitae et leo duis ut diam.<br><br>Dictum sit amet justo donec enim. Interdum varius sit amet mattis vulputate enim. Blandit turpis cursus in hac. Pharetra convallis posuere morbi leo urna molestie. In hac habitasse platea dictumst quisque. Et malesuada fames ac turpis egestas integer eget. Egestas quis ipsum suspendisse ultrices gravida dictum fusce ut. Scelerisque in dictum non consectetur a erat nam at lectus. Suspendisse potenti nullam ac tortor vitae purus faucibus. Nisi porta lorem mollis aliquam ut porttitor leo. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Aenean et tortor at risus viverra. Et tortor at risus viverra adipiscing at in tellus. In fermentum et sollicitudin ac orci phasellus. Lectus nulla at volutpat diam ut. Viverra maecenas accumsan lacus vel facilisis. Habitasse platea dictumst quisque sagittis. Nunc eget lorem dolor sed viverra.
+      </p>
+    </div>
+
+    <script>
+      let stars = document.getElementById('stars')
+      let moon = document.getElementById('moon')
+      let mountains_behind = document.getElementById('mountains_behind')
+      let text = document.getElementById('text')
+      let btn = document.getElementById('btn')
+      let mountains_front = document.getElementById('mountains_front')
+      let header = document.querySelector('header')
+
+      window.addEventListener('scroll', function () {
+        let value = window.scrollY
+        stars.style.left = value * 0.25 + 'px'
+        moon.style.top = value * 1.05 + 'px'
+        mountains_behind.style.top = value * 0.5 + 'px'
+        mountains_front.style.top = value * 0 + 'px'
+        text.style.marginRight = value * 4 + 'px'
+        text.style.marginTop = value * 1.5 + 'px'
+        btn.style.marginTop = value * 1.5 + 'px'
+        header.style.top = value * 0.5 + 'px'
+      })
+    </script>
+  </body>
+</html>
